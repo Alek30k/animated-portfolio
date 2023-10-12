@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Links from "./links/Links";
 import "./sidebar.scss";
 import ToggleButton from "./toggleButton/ToggleButton";
+import { motion } from "framer-motion";
 
 const variants = {
   open: {
@@ -15,20 +17,22 @@ const variants = {
     transition: {
       delay: 0.5,
       type: "spring",
-      stiffness: 400,
+      stiffness: 200,
       damping: 40,
     },
   },
 };
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="sidebar">
-      <div className="bg">
+    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+      <motion.div className="bg" variants={variants}>
         <Links />
-      </div>
-      <ToggleButton />
-    </div>
+      </motion.div>
+      <ToggleButton setOpen={setOpen} />
+    </motion.div>
   );
 };
 
