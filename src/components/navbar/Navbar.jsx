@@ -1,7 +1,28 @@
 import "./navbar.scss";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <div className="navbar">
+      {/* SidKebar */}
+      <div className="wrapper">
+        <span>Ale Dev</span>
+        <div className="social">
+          <a href="#">
+            <img src="/facebook.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/instagram.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/youtube.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/dribbble.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;
