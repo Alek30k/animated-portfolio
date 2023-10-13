@@ -47,13 +47,20 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <h2>ALEJANDRO CABRERA</h2>
-          <h1>Full Stack Developer</h1>
+          <motion.h2 variants={textVariants}>ALEJANDRO CABRERA</motion.h2>
+          <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
           <div className="buttons">
-            <button>See the Latest Works</button>
-            <button>Contact Me</button>
+            <motion.button variants={textVariants}>
+              See the Latest Works
+            </motion.button>
+            <motion.button variants={textVariants}>Contact Me</motion.button>
           </div>
-          <img src="/scroll.png" alt="" />
+          <motion.img
+            src="/scroll.png"
+            alt=""
+            variants={textVariants}
+            animate="scrollButton"
+          />
         </motion.div>
       </div>
       <div className="slidingTextContainer">
