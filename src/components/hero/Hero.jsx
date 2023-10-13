@@ -41,7 +41,12 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="wrapper">
-        <div className="textContainer">
+        <motion.div
+          className="textContainer"
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+        >
           <h2>ALEJANDRO CABRERA</h2>
           <h1>Full Stack Developer</h1>
           <div className="buttons">
@@ -49,7 +54,7 @@ const Hero = () => {
             <button>Contact Me</button>
           </div>
           <img src="/scroll.png" alt="" />
-        </div>
+        </motion.div>
       </div>
       <div className="slidingTextContainer">
         Writer Content Creator Influencer
