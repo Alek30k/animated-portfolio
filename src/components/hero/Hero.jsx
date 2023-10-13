@@ -19,7 +19,8 @@ const textVariants = {
     y: 10,
     transition: {
       duration: 2,
-      repeat: Infinity,
+      repeat: 3,
+      //   repeat: Infinity,
     },
   },
 };
@@ -63,9 +64,14 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
         Writer Content Creator Influencer
-      </div>
+      </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
       </div>
