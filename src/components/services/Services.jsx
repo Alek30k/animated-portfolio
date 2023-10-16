@@ -25,7 +25,15 @@ const Services = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <motion.div className="services" variants={variants} ref={ref}>
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      // animate="animate"
+      // whileInView="animate"
+      ref={ref}
+      animate={"animate"}
+    >
       <motion.div className="textContainer" variants={variants}>
         <p>
           I focus on helping your brand grow
@@ -42,7 +50,7 @@ const Services = () => {
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
             Business.
           </h1>
           <button>WHAT WE DO?</button>
