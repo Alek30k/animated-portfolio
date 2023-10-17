@@ -42,6 +42,17 @@ const Single = ({ item }) => {
 };
 
 const Portfolio = () => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
   return (
     <div className="portfolio">
       <div className="progress">
