@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -20,6 +20,9 @@ const variants = {
 
 const Contact = () => {
   const ref = useRef();
+  const formRef = useRef();
+
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <motion.div
@@ -54,7 +57,7 @@ const Contact = () => {
               strokeWidth={0.2}
               fill="none"
               initial={{ pathLength: 0 }}
-              //   animate={isInView && { pathLength: 1 }}
+              animate={isInView && { pathLength: 1 }}
               transition={{ duration: 3 }}
               d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
@@ -73,7 +76,7 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
-          //   ref={formRef}
+          ref={formRef}
           //   onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
