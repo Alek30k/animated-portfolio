@@ -24,6 +24,26 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_94y20xo",
+        "template_v10u2oh",
+        formRef.current,
+        "pX_2hasGmGcuvjXIW"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
+  };
+
   return (
     <motion.div
       ref={ref}
