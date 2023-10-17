@@ -31,8 +31,8 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_1qa9xko",
-        "template_r8d7veg",
+        "service_wpoykp3",
+        "template_1vuw1kh",
         formRef.current,
         "2vSQeLwIQGjKVLfFf"
       )
@@ -57,14 +57,16 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2> <span>alemank23k@gmail.com</span>
+          <h2>Mail</h2>
+          <span>hello@react.dev</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>{" "}
-          <span>Argentina, Formosa, General Manuel Belgrano</span>
+          <h2>Address</h2>
+          <span>Hello street New York</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2> <span>+54 3704-678598</span>
+          <h2>Phone</h2>
+          <span>+1 234 5678</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
