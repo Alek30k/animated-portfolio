@@ -21,6 +21,8 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -97,7 +99,7 @@ const Contact = () => {
         </motion.div>
         <motion.form
           ref={formRef}
-          //   onSubmit={sendEmail}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
@@ -106,6 +108,8 @@ const Contact = () => {
           <input type="email" required placeholder="Email" />
           <textarea rows={8} placeholder="Message" />
           <button>Submit</button>
+          {error && "Error"}
+          {success && "Success"}
         </motion.form>
       </div>
     </motion.div>
