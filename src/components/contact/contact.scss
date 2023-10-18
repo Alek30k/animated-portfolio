@@ -55,6 +55,15 @@
       position: absolute;
       margin: auto;
       z-index: -1;
+
+      @include mobile {
+        bottom: 50px;
+      }
+    }
+    svg {
+      @include mobile {
+        max-width: 300px;
+      }
     }
 
     form {
@@ -64,7 +73,6 @@
 
       input,
       textarea {
-        font-size: 20px;
         padding: 20px;
         background-color: transparent;
         border: 1px solid white;
@@ -82,7 +90,6 @@
         background-color: orange;
         cursor: pointer;
         font-weight: 500;
-
         @include mobile {
           padding: 10px;
         }
