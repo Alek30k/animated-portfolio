@@ -27,11 +27,11 @@ section {
   overflow: hidden;
 }
 
-// @mixin mobile {
-//   @media (max-width: 738px) {
-//     @content;
-//   }
-// }
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
 // @mixin tablet {
 //   @media (max-width: 1024px) {
 //     @content;
