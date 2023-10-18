@@ -31,10 +31,6 @@
       justify-content: center;
       gap: 20px;
 
-      @include mobile {
-        height: 70%;
-      }
-
       a {
         font-size: 40px;
 
