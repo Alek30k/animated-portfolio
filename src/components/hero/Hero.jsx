@@ -18,8 +18,9 @@ const textVariants = {
     opacity: 0,
     y: 10,
     transition: {
-      duration: 2,
-      repeat: 3,
+      duration: 1.5,
+      repeat: 2,
+
       //   repeat: Infinity,
     },
   },
@@ -51,10 +52,15 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>ALEJANDRO CABRERA</motion.h2>
           <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
           <div className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.a
+              variants={textVariants}
+              href="/Cv-FullStack-Alejandro-Cabrera.pdf"
+            >
+              Download Cv
+            </motion.a>
+            <motion.a href={"#Contact"} variants={textVariants}>
+              Contact Me
+            </motion.a>
           </div>
           <motion.img
             src="/scroll.png"
